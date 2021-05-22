@@ -1,0 +1,30 @@
+.footer {
+  background: #5067a0;
+  padding: 40px 0;
+
+  &__text {
+    font-size: 13px;
+    color: #ffffff;
+    padding: 0 115px;
+    @media (max-width: 776px) {
+      padding: 0 55px;
+    }
+  }
+
+  &__number {
+    font-size: 16px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    @media (max-width: 776px) {
+      font-size: 12px;
+    }
+  }
+}
+
+.container__footer {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: center;
+}

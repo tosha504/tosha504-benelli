@@ -94,8 +94,16 @@ img {
     border-radius: 50%;
     position: fixed;
     color: #fff;
-    top: 136px;
-    right: 268px;
+    top: 30%;
+    right: 22%;
+    @media (max-width: 1024px) {
+      top: 30%;
+      right: 11%;
+    }
+    @media (max-width: 426px) {
+      top: 31%;
+      right: 15%;
+    }
     font-size: 20px;
   }
 
@@ -115,6 +123,6 @@ img {
     border-radius: 20px;
     position: relative;
     z-index: 10000000;
-    top: 50%;
+    top: 20%;
   }
 }

@@ -2,12 +2,19 @@
   background: #5067a0;
   padding: 40px 0;
 
+  @media (max-width: 426px) {
+    padding: 20px 0;
+  }
+
   &__text {
     font-size: 13px;
     color: #ffffff;
     padding: 0 115px;
     @media (max-width: 776px) {
       padding: 0 55px;
+    }
+    @media (max-width: 426px) {
+      padding: 0 10px;
     }
   }
 

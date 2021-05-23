@@ -23,8 +23,8 @@ jQuery(document).ready(function($) {
   $(".dialog__close").on("click", function() {
     $(".dialog").removeClass("active");
   });
-
-  // $main.fadeOut().fadeIn(3000);
+  $header.fadeOut().fadeIn(2500);
+  $main.fadeOut().fadeIn(2500);
 
   $burger.on("click", function() {
     $headerNav.toggleClass("active");

@@ -41,7 +41,7 @@
     }
 
     a {
-      font-size: 12px;
+      font-size: 15px;
       color: #ffffff;
       font-weight: bold;
       text-align: center;
@@ -56,6 +56,9 @@
   }
 
   &__btn {
+    max-width: 120px;
+    width: 100%;
+    text-align: center;
     @media (max-width: 992px) {
       margin-left: auto;
     }
@@ -64,7 +67,7 @@
     padding: 10px 15px;
     border: 1px solid #fff;
     border-radius: 22px;
-    transition: 1.5s;
+    transition: 0.7s;
     @media (max-width: 426px) {
       padding: 5px 10px;
     }
@@ -74,13 +77,13 @@
     }
 
     a {
-      font-size: 12px;
+      font-size: 15px;
       color: #ffffff;
       font-weight: bold;
       text-align: center;
       text-decoration: none;
       @media (max-width: 425px) {
-        font-size: 8px;
+        font-size: 12px;
       }
     }
   }

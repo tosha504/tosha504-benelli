@@ -6,7 +6,7 @@ window.addEventListener("DOMContentLoaded", () => {
     header = document.querySelector(".header"),
     dialog = document.querySelector(".dialog"),
     html = document.querySelector("html"),
-    tabs = document.querySelectorAll(".services__column-items");
+    anchors = document.querySelectorAll('a[href*="#"]');
 
   window.addEventListener("scroll", function() {
     if (this.scrollY > 20) {
@@ -38,42 +38,6 @@ window.addEventListener("DOMContentLoaded", () => {
     html.classList.toggle("fixed-page");
   });
 
-  function log() {
-    tabs.forEach((tab) => {
-      tab.addEventListener("click", function(e, i) {
-        console.log(tabs);
-        tab.classList.toggle("active");
-        tab.classList.toggle("active");
-      });
-    });
-  }
-  log();
-
-  //   drop.addEventListener("click", function(e) {
-
-  //     // 	  .classList.toggle("active");
-  //     // document.querySelector(".services__item-text").classList.toggle("active");
-  //   });
-
-  //   function hideTabContent() {
-  //     tabs.forEach((item) => {
-  //       console.log(item.target);
-  //       item.style.display = "none";
-  //     });
-
-  //     //     document
-  //     //       .querySelector(".services__column-items")
-  //     //       .addEventListener("click", function() {
-  //     //         this.classList.toggle("active");
-  //     //         document
-  //     //           .querySelector(".services__item-text")
-  //     //           .classList.toggle("active");
-  //     //         //     // .slideToggle(300);
-  //     //       });
-  //   }
-  //   hideTabContent();
-  const anchors = document.querySelectorAll('a[href*="#"]');
-
   for (let anchor of anchors) {
     anchor.addEventListener("click", function(e) {
       e.preventDefault();
@@ -86,4 +50,46 @@ window.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+
+  const deadLine = "2021-12-13";
+
+  function getTimeRemaining(endtime) {
+    const t = Date.parse(endtime) - Date.parse(new Date()),
+      minutes = Math.floor((t / 1000 / 60) % 60),
+      seconds = Math.floor((t / 1000) % 60);
+
+    return {
+      total: t,
+      minutes: minutes,
+      seconds: seconds,
+    };
+  }
+  function getZero(num) {
+    if (num >= 0 && num < 10) {
+      return `0${num}`;
+    } else {
+      return num;
+    }
+  }
+
+  function setClock(selector, endtime) {
+    const timer = document.querySelector(selector),
+      minutes = timer.querySelector("#minutes"),
+      seconds = timer.querySelector("#seconds"),
+      timeInerval = setInterval(updateClock, 1000);
+
+    updateClock();
+
+    function updateClock() {
+      const t = getTimeRemaining(endtime);
+      minutes.innerHTML = getZero(t.minutes);
+      seconds.innerHTML = getZero(t.seconds);
+
+      if (t.total <= 0) {
+        clearInterval(timeInerval);
+      }
+    }
+  }
+
+  setClock(".time", deadLine);
 });

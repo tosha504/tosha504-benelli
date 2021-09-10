@@ -123,9 +123,11 @@
 
 .services {
   padding: 77px 0;
-
+  @media (max-width: 475px) {
+    padding: 35px 10px;
+  }
   @media (max-width: 425px) {
-    padding: 5px 10px;
+    padding: 5px 0;
   }
 
   &__columns {
@@ -134,7 +136,7 @@
     gap: 0 30px;
     margin-top: 88px;
 
-    @media (max-width: 425px) {
+    @media (max-width: 476px) {
       grid-template-columns: 1fr;
     }
   }
@@ -162,70 +164,10 @@
     margin: 13px 0 15px 0;
     letter-spacing: 0.03em;
     cursor: pointer;
-    transition: all 0.7s ease 0s;
-
-    &::before,
-    &::after {
-      content: "";
-      width: 10px;
-      height: 1px;
-      background: #000;
-      position: absolute;
-      top: 10px;
-    }
-
-    &::before {
-      transform: rotate(37deg);
-      left: 95px;
-      @media (max-width: 1025px) {
-        left: 65px;
-      }
-      @media (max-width: 973px) {
-        left: 45px;
-      }
-      @media (max-width: 776px) {
-        left: 1%;
-      }
-      @media (max-width: 425px) {
-        left: 65px;
-      }
-    }
-
-    &::after {
-      transform: rotate(-37deg);
-      left: 103px;
-      @media (max-width: 1025px) {
-        left: 73px;
-      }
-      @media (max-width: 973px) {
-        left: 53px;
-      }
-      @media (max-width: 776px) {
-        left: 5%;
-      }
-      @media (max-width: 425px) {
-        left: 73px;
-      }
-    }
-  }
-
-  &__item-subtitle.active {
-    &::before,
-    &::after {
-      background: red;
-    }
-
-    &::before {
-      transform: rotate(-36deg);
-    }
-
-    &::after {
-      transform: rotate(36deg);
-    }
+    transition: all 0.7s;
   }
 
   &__item-text {
-    display: none;
     font-size: 14px;
     letter-spacing: 0.02em;
     line-height: 22px;
@@ -279,6 +221,10 @@
   &__items__wrap {
     display: flex;
     align-items: center;
+    @media (max-width: 575px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 
   &__item__text {
@@ -293,9 +239,14 @@
       font-size: 20px;
     }
   }
+  &__minutes,
+  &__seconds {
+    margin: 5px;
+  }
 }
 
 .time {
+  display: flex;
   margin: 15px 25px;
   font-size: 13px;
   font-size: 36px;
@@ -322,6 +273,9 @@
   td {
     padding: 15px;
     border: 1px #000 solid;
+    @media (max-width: 425px) {
+      padding: 5px;
+    }
   }
 
   @media (max-width: 500px) {

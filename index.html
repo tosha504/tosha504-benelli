@@ -141,11 +141,16 @@
                 with an offer
               </p>
             </div>
-            <!-- <p > <span class="time"> 60</span> <br> минут</p> -->
-            <p>
-              <span class="time"> 60</span> <br />
-              ceкунд
-            </p>
+            <div class="time">
+              <div class="stoper__minutes">
+                <span id="minutes"> 60</span><br />
+                min
+              </div>
+              <div class="stoper__seconds">
+                <span id="seconds"> 60</span> <br />
+                sec
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -162,6 +167,7 @@
               <th>Up to 4000 km.</th>
               <th>Up to 5000 km.</th>
             </tr>
+
             <tr>
               <td class="bold"><b>Air delivery</b></td>
               <td>$654</td>
@@ -170,6 +176,7 @@
               <td>$954</td>
               <td>$1054</td>
             </tr>
+
             <tr>
               <td class="bold"><b> Auto delivery</b></td>
               <td></td>
@@ -178,6 +185,7 @@
               <td>$20</td>
               <td></td>
             </tr>
+
             <tr>
               <td class="bold"><b>Shop tour</b></td>
               <td></td>
@@ -186,6 +194,7 @@
               <td></td>
               <td>$3454</td>
             </tr>
+
             <tr>
               <td class="bold"><b>Other</b></td>
               <td>$128</td>
@@ -243,7 +252,7 @@
             <img src="./img/logo.svg" alt="Тут могла быть ваша реклама!" />
           </a>
           <p class="footer__text">©All rights reserved. Anton Holovyn</p>
-          <a class="footer__number" href="tel:+7 495 053-53-65"
+          <a class="footer__number" href="tel:+7-495-053-53-65"
             >+7 495 053-53-65</a
           >
         </div>
@@ -256,7 +265,7 @@
                 <p>Order call</p>
                 <div class="form__items">
                   <input
-                    placeholder="Введите имя"
+                    placeholder="Your name"
                     class="main-screen__form-item"
                     type="text"
                     name="nameuser"
@@ -264,7 +273,7 @@
                     required=""
                   />
                   <input
-                    placeholder="Введите E-mail"
+                    placeholder="Your E-mail"
                     class="main-screen__form-item"
                     type="email"
                     name="e-mail"
@@ -273,7 +282,7 @@
                   />
 
                   <input
-                    placeholder="Введите телефон"
+                    placeholder="Phone"
                     class="main-screen__form-item"
                     type="tel"
                     name="phone"

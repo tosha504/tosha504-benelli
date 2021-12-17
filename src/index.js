@@ -51,7 +51,7 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  const deadLine = "2021-12-13";
+  const deadLine = "2022-12-13";
 
   function getTimeRemaining(endtime) {
     const t = Date.parse(endtime) - Date.parse(new Date()),
